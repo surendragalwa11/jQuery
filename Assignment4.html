@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function(){
+var lastt, tdiff;
+$( "p" ).click(function( event )
+               { 
+			   if (lastt)
+     			   {
+                    tdiff = event.timeStamp - lastt;
+                    $("p").text( "Time since last event: " + tdiff );
+                   } 
+				   else{
+				   $("p").text( "click once again" );
+				   }
+   
+	         lastt = event.timeStamp;
+	          });
+
+
+});
+</script>
+</head>
+<body>
+<!-- <button>click here</button>  -->
+<p>Click on this paragraph two times and get the time interval in milliseconds</p>
+</body>
+</html>

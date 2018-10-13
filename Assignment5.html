@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>Assignment</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function()
+{
+  $("div").focusin(function()
+                {
+				$(this).css("background-color", "#FFFFCC");
+                });
+  $("div").focusout(function()
+                {
+				$(this).css("background-color", "#FFAAAA");
+                });
+});
+</script>
+</head>
+<body>
+<div class="first">
+ Username:<input class="uname" type="text"><br><br>
+ Password:<input class="password" type="password"><br><br>
+ <button class="btn">Button</button>
+</div>
+</body>
+</html>

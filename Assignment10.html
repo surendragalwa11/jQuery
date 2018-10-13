@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="assignment10.css">
+<script>
+        $(function()
+          {
+             $("#cc").click(function()
+			 {
+			  $("#p3").hide();
+			  $(".p2").show();	
+			 });
+			  $("#wt").click(function()
+			 {
+			  $(".p2").hide();
+			  $("#p3").show();	
+			 });
+					   
+                      
+          });   
+</script>
+</head>
+
+<body class="bd">
+<div class="p1">
+  <h3>Payment:</h3>
+  <input type="radio" id="cc" value="cc" name="mode">Credit Card<br><br>
+  <input type="radio" id="wt" value="wt" name="mode">Wire Transfer<br><br>
+  <button class="btn">Buy!</button>
+  </div>
+  
+  <p class="p2" style="display:none">
+  Card number: <input type="text" maxlength="16" size="16" placeholder="card number"><br><br>
+ Expiration: <input type="number" max="12" min="01" size="2"> &nbsp<b>/</b>&nbsp <input type="text" placeholder="year" pattern="\d{4}" min="2017" maxlength="4" size="4"><br><br>
+ 3-digit security number: <input type="password" size="3" maxlength="3"  pattern="^[0-9]{3}$">
+  </p>
+  
+  <p id="p3" style="display:none">
+  Transfer the amount to: reg. 9570, account 0009286322 (in Denmark)
+  </p>
+</body>
+</html>

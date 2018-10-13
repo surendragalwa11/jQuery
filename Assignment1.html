@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+ 
+ $(function()
+ {
+  $("#jquery_jplayer_1").jPlayer({ready: function ()
+                                         {
+                                         $(this).jPlayer("setMedia", {m4a: "/media/mysound.mp4",oga: "/media/mysound.ogg"});
+                                         },swfPath: "/js",supplied: "m4a, oga"
+                                });
+ });
+ 
+</script>
+<head>
+
+<body>
+<div id="jquery_jplayer_1"></div>
+<div id="jp_container_1">
+ <a href="jd.mp4" class="jp-play">Play</a>
+<!-- <a href="" class="jp-pause">Pause</a>  -->
+</div>
+</body>
+</html>

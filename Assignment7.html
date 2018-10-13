@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Tic tac toe</title>
+<link type="text/css" rel="stylesheet" href="ticTac.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  
+$(function()
+  {
+	 var play=true;
+     var move=1;
+	 $("#tab tr td").click(function()        //on clicking on any box
+	                       {
+						     if($(this).text()=="" && play )     //if game id not finished
+							 {
+							    if((move%2)==1)     //logic for turn of 1st and 2nd player
+								{
+								$(this).append("X");
+								}
+								else
+								{
+								$(this).append("O");
+								}
+								move++;
+								
+								
+								
+								if(checkWinner()!=-1 && checkWinner()!="")  //game is over
+								{
+								  if(checkWinner()=="X")
+								  {
+								  alert("Player 1 won");
+								  }
+								  else
+								  {
+								  alert("Player 2 won");
+								  }
+								  play=false;  //game finished
+								  }
+								  
+								 if(move>9&&play) //match draw
+								 {
+								 alert("match draw,press reset button");
+								 move=1;
+								}
+							 }
+	                       });
+						   
+	 function checkWinner()
+     {
+	      //define boxes  //retrieve text inside the box
+		  var box1=$("#tab tr:nth-child(1) td:nth-child(1)").text();
+		  var box2=$("#tab tr:nth-child(1) td:nth-child(2)").text();
+		  var box3=$("#tab tr:nth-child(1) td:nth-child(3)").text();
+		  
+		  var box4=$("#tab tr:nth-child(2) td:nth-child(1)").text();
+		  var box5=$("#tab tr:nth-child(2) td:nth-child(2)").text();
+		  var box6=$("#tab tr:nth-child(2) td:nth-child(3)").text();
+		  
+		  var box7=$("#tab tr:nth-child(3) td:nth-child(1)").text();
+		  var box8=$("#tab tr:nth-child(3) td:nth-child(2)").text();
+		  var box9=$("#tab tr:nth-child(3) td:nth-child(3)").text();
+		  
+		  //check rows
+		  if( (box1==box2) && (box2==box3) ){ return box3; }   //row 1
+     else if( (box4==box5) && (box5==box6) ){ return box6; }   //row 2
+	 else if( (box7==box8) && (box8==box9) ){ return box9; }   //row 3
+	 
+	    //check columns
+	      if( (box1==box4) && (box4==box7) ){ return box7; }   //column 1
+     else if( (box2==box5) && (box5==box8) ){ return box8; }   //column 2
+     else if( (box3==box6) && (box6==box9) ){ return box9; }   //column 3
+ 
+    //check diagonal
+	     if( (box1==box5) && (box5==box9) ){ return box9; }   //diagonal 1
+    else if( (box3==box5) && (box5==box7) ){ return box7; }   //diagonal 2
+   
+	  //no winner
+	  return (-1);
+     }	
+	 
+	 //RESET button
+	 $(".btn").click(function()   
+	           {
+		           box1=$("#tab tr:nth-child(1) td:nth-child(1)").html('');
+		           box2=$("#tab tr:nth-child(1) td:nth-child(2)").html('');
+		           box3=$("#tab tr:nth-child(1) td:nth-child(3)").html('');
+		  
+		           box4=$("#tab tr:nth-child(2) td:nth-child(1)").html('');
+		           box5=$("#tab tr:nth-child(2) td:nth-child(2)").html('');
+		           box6=$("#tab tr:nth-child(2) td:nth-child(3)").html('');
+		  
+		           box7=$("#tab tr:nth-child(3) td:nth-child(1)").html('');
+		           box8=$("#tab tr:nth-child(3) td:nth-child(2)").html('');
+		           box9=$("#tab tr:nth-child(3) td:nth-child(3)").html('');
+				   move=1;
+	           });
+ });
+
+</script>
+ 
+</head>
+
+<body>
+
+<table id="tab">
+<tr>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td>
+</tr>
+</table><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button class="btn">RESET</button>
+</body>
+</html>

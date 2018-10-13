@@ -1,0 +1,36 @@
+.*
+{
+ margin:0;
+ padding:0;
+}
+
+table
+{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+#tab
+{
+ padding:0px;
+ margin:0 auto;
+ margin-top:150px;
+ 
+}
+
+#tab tr td
+{
+width:80px;
+height:80px;
+border:1px solid #1c1c1c;
+font-family:Helvetica;
+font-size:30px;
+text-align:center;
+background-color:#AFEEEE;
+}
+
+#tab tr td:hover
+{
+ background:#008080;
+ cursor:pointer;
+}

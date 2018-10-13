@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #00FFFF;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+ $(function()
+ {
+   $("button").click(function()
+                     {
+					  $(".one").hide();
+					  $(".second").css("background-color","red");
+					  $(".second").css("color","cyan");
+					  $("[href]").hide();
+					  $("tr:odd").css("background-color","red");
+					  //$(this).hide();
+					  $(" li:first-child").hide();
+			
+                     $("#panel").slideDown(2000);
+					 $("#panel").fadeTo("slow", 0.3);
+					 }
+					 );
+					 $("input").keydown(function()
+					                    {
+                                          $("input").css("background-color", "red");
+                                        }
+										);
+                                          $("input").keyup(function()
+		  								                   {
+                                                             $("input").css("background-color", "yellow");
+                                                            }
+															);
+					$( "input" ).focus(function()
+                    					{
+                                        $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 2000 );
+                                        }
+										);
+										
+ }
+ );
+</script>
+
+<p class="one">First paragraph</p>
+<p class="second">Second Paragraph</p>
+
+<p ><a href="http://www.google.com">Google</a></p>
+ 
+Write something: <input type="text">
+ 
+<p><input type="text"> <span>Focus starts.. Write your name.</span></p>
+<p><input type="password"> <span>Focus starts.. Write your password.</span></p>
+    
+<h1>Welcome to My Web Page</h1>
+ <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>Mayura Sonar</td>
+            <td>L&D</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>Ishan Parekh</td>
+            <td>Dot Net</td>
+            <td>Ahmedabad</td>
+        </tr>
+        <tr>
+            <td>Bhushan Shah</td>
+            <td>Dot Net</td>
+            <td>Irvine</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Avitha R</td>
+            <td>BI</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>Nancy Samson</td>
+            <td>Human Resource</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>Liju Ajish</td>
+            <td>Human Resource</td>
+            <td>Ahmedabad</td>
+        </tr>
+        <tr>
+            <td>Adam Hussain</td>
+            <td>Business Development</td>
+            <td>Bangalore</td>
+        </tr>
+       
+    </table>
+	<p>List 1:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+    </ul>
+    <p>List 2:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+	
+	<div id="flip">Click to slide down panel</div>
+    <div id="panel">
+       Hello Guys!!!
+       Welcome to Sigma InfoSolutions!!!
+    </div>
+<button>Click here</button>
+</body>
+</html>

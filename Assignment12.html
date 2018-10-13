@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<link rel = "stylesheet" href = "assin12.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function()
+ {
+  $(".abt" ).click(function()
+               { 
+			    $(".abt").css({"background-color":"white","color":"#F4A480"});
+				$(".srv").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				$(".cnt").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				
+			    $("#p2").hide();
+				$("#p3").hide();
+				$("#p1").hide();
+				$("#p1").slideDown(1000);
+	          });
+  $(".srv" ).click(function()
+               { 
+			    $(".srv").css({"background-color":"white","color":"#F4A480"});
+				$(".abt").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				$(".cnt").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				
+				$("#p1").hide();
+				$("#p3").hide();
+				$("#p2").show();
+	          });		  
+  $(".cnt" ).click(function()
+               { 
+			    $(".cnt").css({"background-color":"white","color":"#F4A480"});
+				$(".srv").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				$(".abt").css({"background-color":"#FFF5EE","color":"#00BFFF"});
+				
+				$("#p2").hide();
+				$("#p1").hide();
+				$("#p3").slideDown(1000);
+	          });
+
+ });
+</script>
+</head>
+
+<body>
+
+<div class="main">
+<button class="abt"><h3>ABOUT</h3></button>
+<button class="srv"><h3>SERVICES</h3></buton>
+<button class="cnt"><h3>CONTACT</h3></button>
+</div>
+
+<div id="abtt">
+<p id="p1" ><b> Sigma info. solutions,an ISO 9001:2008 & ISO 27001:2005 certified company,is a
+ global IT and product engineering services company.We specializes in the execution of
+ strategic initiatives for business leaders.We represent an organization dedicated
+ towars providing intelligent and reliable IT solutions  for all growing business
+ leads.</b></p>
+
+ <p id="p2" style="display:none"><b>Our clients include several innovative product start-ups to billion dollar revenue
+ companies. Sigma has demonstrated a significant year on year growth for the last 13+
+ years and the growth is largely attributed to our commitment to quality, customer delight 
+ and ability to attract & retain top-notch talent.</b></p>
+
+<p id="p3" style="display:none"><b>Sigma's strategic alliance partners are an essential part of our commitment to meet 
+the critical enterprise needs of our clients. We have developed strategic alliances with key 
+organizations and have accreditation such as - Microsoft Silver Application Development Partner,
+ Openbravo Certified Partner, Pentaho Certified System Integrator, Episerver, Docusign and Magento
+ Certified Partner.</p></b>
+
+</div>
+
+<body>
+</html>

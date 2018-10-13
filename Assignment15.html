@@ -1,0 +1,59 @@
+ <html>
+<head>
+    <style type="text/css">
+        .imgStyle {
+            width: 101px;
+            height: 100px;
+            border: 3px solid grey;
+        }
+    </style>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+
+  $(function ()
+    {
+     $('#divId img').on({
+                        mouseover: function ()
+						           {
+                                   $(this).css({'cursor': 'hand','border-Color': 'red'});
+                                   },
+                        mouseout: function ()
+            					  {
+                                  $(this).css({'cursor': 'default','border-Color': 'grey'});
+                                  },
+                        click: function ()
+ 						         {
+                                var imageURL = $(this).attr('src');
+                               $('#mainImage').fadeOut(500, function ()
+						                                	 {
+                                                             $(this).attr('src', imageURL);
+                                                             }).fadeIn(500);
+                                 }
+                       });
+    });
+ 
+</script>
+</head>
+
+<body>
+    <img id="mainImage" style="border:3px solid grey"
+         src="Dhoni.jpg" height="500" width="900" />
+    <br />
+    <div id="divId">
+        <img class="imgStyle" src="Dhoni.jpg" title="Captain cool"/>
+        <img class="imgStyle" src="Virat.jpg" title="Virat Kohli"/>
+        <img class="imgStyle" src="Sehwag.jpg" title="Virendra Sehwag" />
+        <img class="imgStyle" src="Sachin.jpg" title="Sachin Tendulkar"/>
+        <img class="imgStyle" src="Dravid.jpg" title="Rahul Dravid" />
+        <img class="imgStyle" src="Yuvraj.jpg" title="Yuvraj Singh"/>
+        <img class="imgStyle" src="Kumble.jpg" title="Anil Kumble"/>
+		<img class="imgStyle" src="Kapil.jpg" title="Kapil Dev"/>
+        <img class="imgStyle" src="Zaheer.jpg"  title="Zaheer Khan"/>
+        <img class="imgStyle" src="Irfan.jpg" title="Irfan Pathan"/>
+        <img class="imgStyle" src="Harbhajan.jpg" title="Harbhajan Singh"/>
+		<img class="imgStyle" src="BCCI.jpg" title="BCCI"/>
+    </div>
+</body>
+</html>
+

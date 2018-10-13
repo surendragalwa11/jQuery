@@ -1,0 +1,59 @@
+
+.main
+{
+border-collapse:collapse;
+border-spacing:0;
+width:auto;
+height:100px;
+border-radius:4px;
+background-color:#FFDF46;
+border-radius:6px;
+}
+.abt
+{
+ position:absolute;
+ left:11px;
+ top:47px;
+ height:60px;
+ width:100px;
+ background-color:#FFF5EE;
+ border-radius:6px;
+ color:#00BFFF;
+}
+
+.srv
+{
+position:absolute;
+ left:113px;
+ top:47px;
+ height:60px;
+ width:100px;
+ background-color:#FFF5EE;
+ border-radius:6px;
+ color:#00BFFF;
+}
+
+.cnt
+{
+position:absolute;
+ left:216px;
+ top:47px;
+ height:60px;
+ width:100px;
+ background-color:#FFF5EE;
+ border-radius:6px;
+ color:#00BFFF;
+}
+
+#abtt
+{
+position:absolute;
+top:110px;
+border-collapse:collapse;
+border-spacing:0;
+
+height:543px;
+font-size:20px;
+background-color:#E6E6FA;
+
+}

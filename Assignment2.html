@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+  $(function()
+     {
+	   $("button").click(function()
+	                     {
+              $(".abc").find("h1").css("background-color","red");
+	                     }
+						 );
+     }
+	);
+
+    </script>
+</head>
+<body>
+    <div class="abc">
+	<h1 id="h1">First h1 element.</h1>
+	<h1 id="h1">Second h1 element.</h1>
+	<h2 id="h2">First h2 element.</h2>
+	<h2 id="h2">Second h2 element.</h2>
+	<h3 id="h3">the only h3 tag.</h3>
+    </div>
+	<button>Click</button>
+</body>
+</html>
